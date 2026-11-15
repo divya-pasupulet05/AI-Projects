@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Bot, Plus, Send, Trash2, MessageSquare, Sparkles, Menu, X } from "lucide-react";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API = (import.meta.env.VITE_API_URL || "").replace(/\/$/, "");
 
 export default function App() {
   const [conversations, setConversations] = useState([]);
